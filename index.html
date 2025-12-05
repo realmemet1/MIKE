@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shoe Mike — Step into Sound</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background: linear-gradient(135deg, #000, #444); color:white; }
     .hero { background:#111; color:white; padding:60px 20px; text-align:center; }
     .btn { padding:12px 22px; border-radius:8px; text-decoration:none; display:inline-block; margin:8px; transition:0.3s; }
     .btn.primary { background:#ff4040; color:white; }
@@ -14,10 +14,10 @@
     img { transition: transform 0.3s ease; }
     img:hover { transform: scale(1.05); }
     .features .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; }
-    article { background:#f2f2f2; padding:20px; border-radius:10px; transition:0.3s; }
+    article { background:#222; padding:20px; border-radius:10px; transition:0.3s; color:white; }
     article:hover { transform:translateY(-5px); }
     .buy .price { font-size:1.4rem; font-weight:bold; }
-    footer { text-align:center; padding:20px; background:#eee; margin-top:40px; }
+    footer { text-align:center; padding:20px; background:#222; margin-top:40px; color:white; }
 
     /* Fade-in animation */
     .fade { opacity:0; transform:translateY(20px); transition:1s; }
@@ -91,6 +91,19 @@
         <button class="btn primary" type="submit">Send Message</button>
       </form>
     </section>
+
+    <!-- Variant Section Added -->
+    <section id="variants" class="fade" style="margin-top:40px;">
+      <h2>Shoe Mike Variant</h2>
+      <div style="text-align:center; margin-top:20px;">
+        <img src="https://i.pinimg.com/1200x/0c/6a/00/0c6a001fddf5c0cb8922a54ee901cc4b.jpg" alt="New Variant" style="width:300px; border-radius:12px; display:block; margin:auto; transition:0.3s;">
+        <p style="font-weight:bold; font-size:1.2rem; margin-top:10px;">Price: $30</p>
+        <p style="max-width:600px; margin:10px auto; font-size:0.95rem; line-height:1.5;">
+          This retro-inspired Shoe Mike variant blends vintage textures with modern comfort. Its classic stitching and old-school silhouette give it a nostalgic look, while the cushioned inner lining and flexible sole make it extremely comfortable for long wear.
+        </p>
+      </div>
+    </section>
+
   </main>
 
   <footer>
