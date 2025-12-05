@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shoe Mike — Step into Sound</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    .hero { background:#111; color:white; padding:60px 20px; text-align:center; }
+    .btn { padding:12px 22px; border-radius:8px; text-decoration:none; display:inline-block; margin:8px; transition:0.3s; }
+    .btn.primary { background:#ff4040; color:white; }
+    .btn:hover { transform:scale(1.07); }
+    .wrap { max-width:900px; margin:auto; padding:20px; }
+    img { transition: transform 0.3s ease; }
+    img:hover { transform: scale(1.05); }
+    .features .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; }
+    article { background:#f2f2f2; padding:20px; border-radius:10px; transition:0.3s; }
+    article:hover { transform:translateY(-5px); }
+    .buy .price { font-size:1.4rem; font-weight:bold; }
+    footer { text-align:center; padding:20px; background:#eee; margin-top:40px; }
+
+    /* Fade-in animation */
+    .fade { opacity:0; transform:translateY(20px); transition:1s; }
+    .fade.visible { opacity:1; transform:translateY(0); }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap fade">
+      <h1>Shoe Mike</h1>
+      <p class="tag">The world's first wearable footpad microphone — capture footsteps, ambience, and movement-driven audio.</p>
+      <a class="btn primary" href="#contact">Buy Now</a>
+      <a class="btn" href="#features">Learn More</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="fade">
+      <img src="https://i.pinimg.com/736x/92/06/83/920683dbbb1736e44f290891b5e6a72e.jpg" alt="Shoe Mike Image" style="width:100%; max-width:500px; border-radius:12px; margin:20px auto; display:block;">
+    </section>
+
+    <section id="features" class="features fade">
+      <h2>Why Shoe Mike?</h2>
+      <div class="grid">
+        <article>
+          <h3>Crystal Clear</h3>
+          <p>High-sensitivity contact mic technology picks up subtle footfall and textures.</p>
+        </article>
+        <article>
+          <h3>Comfort First</h3>
+          <p>Thin, flexible design fits any shoe and keeps you moving naturally.</p>
+        </article>
+        <article>
+          <h3>Plug & Record</h3>
+          <p>Works with recorders, cameras, and mobiles (adapters available).</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="how fade">
+      <h2>How it works</h2>
+      <ol>
+        <li>Insert Shoe Mike in your shoe insole.</li>
+        <li>Connect to your recording device.</li>
+        <li>Record natural movement audio — edit or share.</li>
+      </ol>
+    </section>
+
+    <section id="buy" class="buy fade">
+      <h2>Get your Shoe Mike</h2>
+      <p class="price">Now only $500 — limited launch offer.</p>
+      <a class="btn primary large" href="#contact">Preorder</a>
+    </section>
+
+    <section id="contact" class="contact fade">
+      <h2>Contact & Preorders</h2>
+      <p><strong>Phone:</strong> +62-821-8477-8338</p>
+      <p>
+        To preorder or contact us, please message us.<br><br>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=matthew.9999@sch.highscope.or.id&su=Preorder%20Shoe%20Mike" target="_blank" class="btn primary">Email Us</a>
+      </p>
+      <p>Or email manually: <strong>matthew.9999@sch.highscope.or.id</strong></p>
+
+      <form action="#" method="post">
+        <label>Name</label>
+        <input name="name" type="text" required>
+        <label>Email</label>
+        <input name="email" type="email" required>
+        <label>Message</label>
+        <textarea name="message" rows="4"></textarea>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Shoe Mike. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Fade elements on scroll
+    const fades = document.querySelectorAll('.fade');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+
+    fades.forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
